@@ -58,9 +58,14 @@ var fight = function() {
         }
  
         // if no (false), ask question again by running fight() again
-    }   else {
+        else {
             fight();
         }
+        // if player did not choose 1 or 2 in prompt
+    }   else {
+        window.alert("You need to pick a valid option. Try again!");
+    }
+
 };
 
 //run function to start game
