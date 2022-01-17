@@ -81,9 +81,15 @@ var startGame = function() {
             // pick new enemy to fight based on the index of the enemyNames array
             var pickedEnemyName = enemyNames[i];
 
-            // reset enemyHealth before starting new fight
-            enemyHealth = 50;
+            // function to generate a random numeric value
+            // generate random damage value based on player's attack power
+            var damage = randomNumber(playerAttack - 3, playerAttack);
+            var damage = randomNumber(enemyAttack - 3, enemyAttack);
 
+            enemyHealth = Math.max(0, enemyHealth - damage);
+                
+        
+            
             // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
             fight(pickedEnemyName);
 
