@@ -1,6 +1,6 @@
 
 //fight function (now with parameter for enemy's name)
-var fight = function(enemy.name) {
+var fight = function(enemy) {
     // repeat and execute as long as the enemy-robot is alive
     while(playerInfo.health > 0 && enemy.health > 0) {
         //ask player if they'd like to fight or run
