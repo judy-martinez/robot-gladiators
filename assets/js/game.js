@@ -93,7 +93,7 @@ var fight = function(enemy) {
             // remove player's health by subtracting the amount set in the damage variable
             playerInfo.health = Math.max(0, playerInfo.health - enemy.attack);
             console.log(
-                enemyNames + 
+                enemy.name + 
                 ' attacked ' + 
                 playerInfo.name + 
                 '. ' + 
