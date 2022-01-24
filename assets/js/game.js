@@ -106,7 +106,7 @@ var fight = function(enemy) {
             // check player's health
             if (playerInfo.health <= 0) {
                 window.alert(playerInfo.name + ' has died!');
-                // leave while() loop if player ' has died!' );
+                // leave while() loop if player ' has died!'
                 break;
             }   else {
                 window.alert(playerInfo.name +  ' still has '  + playerInfo.health + ' health left.');  
@@ -117,6 +117,7 @@ var fight = function(enemy) {
     }
 };
 
+// function to start a new game
 var startGame = function() {
     //reset player stats
     playerInfo.reset();
