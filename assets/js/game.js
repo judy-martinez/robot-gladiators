@@ -124,6 +124,9 @@ var startGame = function() {
 
     // fight each enemy robot by looping over them and fighting them one at a time
     for (var i = 0; i < enemyInfo.length; i++) {
+        // check player stats
+        console.log(playerInfo);
+        
         // if player is still alive, keep fighting
         if (playerInfo.health > 0) {
             // let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
