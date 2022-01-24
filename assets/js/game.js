@@ -126,7 +126,7 @@ var startGame = function() {
     for (var i = 0; i < enemyInfo.length; i++) {
         // check player stats
         console.log(playerInfo);
-        
+
         // if player is still alive, keep fighting
         if (playerInfo.health > 0) {
             // let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
@@ -135,7 +135,11 @@ var startGame = function() {
             // pick new enemy to fight based on the index of the enemyNames array
             var pickedEnemyObj = enemyInfo[i];
 
-            // function to generate a random numeric value
+            // set health for picked enemy
+            pickedEnemyObj.health = randomNumber(40,60);
+
+            console.log(pickedEnemyObj);
+            
             // generate random damage value based on player's attack power
             var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
             var damage = randomNumber(enemy.attack - 3, enemy.attack);
