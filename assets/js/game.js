@@ -91,7 +91,7 @@ var fight = function(enemy) {
             var damage = randomNumber(enemy.attack - 3, enemy.attack);
 
             // remove player's health by subtracting the amount set in the damage variable
-            playerInfo.health = Math.max(0, playerInfo.health - damage);
+            playerInfo.health = Math.max(0, playerInfo.health - enemy.attack);
             console.log(
                 enemyNames + 
                 ' attacked ' + 
@@ -192,6 +192,7 @@ var endGame = function() {
     } else {
         window.alert("Thank you for playing Robot Gladiators! Come back soon!");
     }
+
 };
 
 // go to shop between battles function
