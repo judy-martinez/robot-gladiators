@@ -139,12 +139,6 @@ var startGame = function() {
             pickedEnemyObj.health = randomNumber(40,60);
 
             console.log(pickedEnemyObj);
-            
-            // generate random damage value based on player's attack power
-            var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
-            var damage = randomNumber(enemy.attack - 3, enemy.attack);
-
-            enemy.health = Math.max(0, enemy.health - damage);
                 
             // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemy.nameparameter
             fight(pickedEnemyObj);
