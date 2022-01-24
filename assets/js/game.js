@@ -180,8 +180,7 @@ var endGame = function() {
         localStorage.setItem("name", playerInfo.name);
 
         alert(playerInfo.name + " naw has the high score of " + playerInfo.money + "!");
-    } 
-    else {
+    }   else {
         alert(playerInfo.name + " did not beat the high score of " + highScore + ". Maybe next time!");
     }    
 
@@ -233,10 +232,13 @@ var getPlayerName = function() {
     while (name === "" || name === null) {
         name = prompt("What is your robot's name?");
     }
-
     console.log("Your robot's name is " + name);
     return name;
 };
+
+/* END GAME FUNCTIONS */
+
+/* GAME INFORMATION / VARIABLES */
 
 var playerInfo = {
     name: getPlayerName(),
@@ -247,17 +249,16 @@ var playerInfo = {
         this.health = 100;
         this.money = 10;
         this.attack = 10;
-    }, //comma!
+    }, 
     refillHealth: function() {
         if (this.money >= 7) {
             window.alert("Refilling player's health by 20 for 7 dollars.");
             this.health += 20;
             this.money -=7;
-        }
-        else {
+        }   else {
             window.alert("You don't have enough money!");
         }
-    }, // comma!
+    }, 
     upgradeAttack: function() {
         if (this.money >= 7) {
             window.alert("Upgrading player's attack by 6 for 7 dollars.");
